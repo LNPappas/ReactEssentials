@@ -2,7 +2,7 @@
   "name": "react-essentials",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://lnpappas.github.io/react-essentials",
+  "homepage": "https://lnpappas.github.io/ReactEssentials/",
   "type": "module",
   "scripts": {
     "dev": "vite",
