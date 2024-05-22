@@ -1,28 +1,24 @@
-// const reactDescriptions = ['Fundamental', 'Crucial', 'Core'];
+import { useState } from "react";
 
-// function genRandomInt(max) {
-//   return Math.floor(Math.random() * (max + 1));
-// }
-
-function Header() {
-  return (
-    <header>
-      <img src="src/assets/react-core-concepts.png" alt="Stylized atom" />
-      <h1>React Essentials</h1>
-      <p>
-        Fundamental React concepts you will need for almost any app you are
-        going to build!
-      </p>
-    </header>
-  );
-}
+import Header from "./components/Header";
+import CoreConcept from "./components/CoreConcepts";
+import Examples from "./components/Examples";
+import { TabContent } from "./components/TabContent/TabContent";
 
 function App() {
+  const [selectedTopic, setSelectedTopic] = useState(null);
+
+  const handleClick = (selectedButton) => {
+    setSelectedTopic(selectedButton);
+  };
+
   return (
     <div>
       <Header />
       <main>
-        <h2>Time to get started!</h2>
+        <CoreConcept />
+        <Examples handleClick={handleClick} />
+        <TabContent topic={selectedTopic} />
       </main>
     </div>
   );
