@@ -1,14 +1,13 @@
 import "./Examples.css";
 import TabButton from "../TabButton";
-
-const buttons = ["Components", "JSX", "Props", "State"];
+import { CORE_TITLES } from "../CoreConcepts/concepts";
 
 export function Examples({ handleClick, selectedTopic }) {
   return (
     <section id="examples">
       <h2>Examples</h2>
       <menu>
-        {buttons.map((button, index) => {
+        {CORE_TITLES.map((button, index) => {
           return (
             <TabButton
               key={`${button}-${index}`}
