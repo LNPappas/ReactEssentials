@@ -17,7 +17,7 @@ function App() {
       <Header />
       <main>
         <CoreConcept />
-        <Examples handleClick={handleClick} />
+        <Examples handleClick={handleClick} selectedTopic={selectedTopic} />
         <TabContent topic={selectedTopic} />
       </main>
     </div>
