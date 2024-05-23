@@ -1,16 +1,16 @@
 import "./TabContent.css";
 import { EXAMPLES } from "./topics";
+import Section from "../Section";
 
 export function TabContent({ topic }) {
   if (!topic) return null;
   const { title, description, code } = EXAMPLES[topic];
   return (
-    <div id="tab-content">
-      <h3>{title}</h3>
+    <Section title={title} id="tab-content">
       <p>{description}</p>
       <pre>
         <code>{code}</code>
       </pre>
-    </div>
+    </Section>
   );
 }

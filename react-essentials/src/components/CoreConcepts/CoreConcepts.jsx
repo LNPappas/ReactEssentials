@@ -1,10 +1,10 @@
 import "./CoreConcepts.css";
 import { CORE_CONCEPTS } from "./concepts";
+import Section from "../Section";
 
 export function CoreConcept() {
   return (
-    <section id="core-concepts">
-      <h2>Core Concepts</h2>
+    <Section id="core-concepts" title="Core Concepts" container="ul">
       <ul>
         {CORE_CONCEPTS.map((concept, index) => {
           const { image, title, description } = concept;
@@ -17,6 +17,6 @@ export function CoreConcept() {
           );
         })}
       </ul>
-    </section>
+    </Section>
   );
 }
